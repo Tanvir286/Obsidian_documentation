@@ -1,4 +1,4 @@
-Next js render শুরুতে সকল log server run হয়।কিন্তু যখন এটা use client দেওয়া হয়,তখন browser  log করে দেখা যায় ।
+Next JS render শুরুতে সকল log server run হয়।কিন্তু যখন এটা use client দেওয়া হয়,তখন browser  log করে দেখা যায় ।
 
 ![[next013.png]]
 
@@ -39,12 +39,14 @@ export default Home;
 ```
 
 ---
+---
 
-এতে পুরোটা render হবে। যার ফলে সময় অনেক বেশি লাগবে। তারজন্য সময় যেন কম লাগে সে জন্য specific component use client ব্যাবহার করবো। এতে render টাইম কম লাগবে ।
+⚫ এই ক্ষেত্রে সম্পূর্ণ পৃষ্ঠাটি একসাথে **render** হবে, যার ফলে লোড হতে বেশি সময় লাগবে। তবে, সময় কমানোর জন্য **specific components**-গুলোর জন্য **client component** ব্যবহার করা উচিত। এর ফলে **render time** কমে যাবে এবং পারফরম্যান্স উন্নত হবে।
 
 ![[next005.png]]
 
-part one
+### ①  Main Page
+
 ```js
 import React from "react";
 import Counter from './../component/Counter/page';
@@ -60,7 +62,8 @@ const Home = () => {
 export default Home;
 ```
 
-part2
+### ②  Specific Component
+
 ```js
 "use client";
 import React, { useState } from "react";
