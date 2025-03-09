@@ -1,4 +1,8 @@
-To prevent caching entirely and always fetch fresh data on every request, you can use the `cache: "no-store"` option in the `fetch` request.
+## ❏ no-store
+
+##### `no-store` হল Next.js-এ `fetch` API-এর একটি অপশন, যা ডেটা ক্যাশে করা থেকে বাধা দেয়। এটি প্রতিটি রিকোয়েস্টে নতুন ডেটা ফেচ করে এবং কোনো ডেটা ক্যাশে করে না।
+
+◈ প্রতিটি রিকোয়েস্টে নতুন ডেটা ফেচ করে, যাতে ইউজার সর্বশেষ ডেটা দেখতে পায়।
 
 ```js
 export const metadata = {

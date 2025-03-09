@@ -17,7 +17,10 @@
 npm install json-server
 ```
 
-❷ Usage: Create a `db.json`
+❷ Usage: Create a `db.json` 
+
+❐ ঐটা root এ  file create করতে হবে ।
+
 
 ```js
 {

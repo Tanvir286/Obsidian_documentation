@@ -1,7 +1,17 @@
-###  1. Defining Route and next route
+
+| No  | Title                         |
+| --- | ----------------------------- |
+| 01  | Defining Route and next route |
+| 02  | Layout & Nesting layout       |
+| 03  | Router Group                  |
+| 04  | Not Found Page 404            |
+| 05  | Loading Page                  |
+| 06  | Global Error  Handling Page   |
+
+###  ==1. Defining Route and next route==
 ![[next014.png]]
 
-###  2.Layout & Nesting layouts
+###  ==2.Layout & Nesting layouts==
 
 `Layout.js` হচ্ছে একটি **পুনঃব্যবহারযোগ্য (reusable) wrapper component**, যা Next.js-এ একটি নির্দিষ্ট পেজ বা একাধিক পেজের জন্য **একই স্ট্রাকচার (structure) বজায় রাখতে** সাহায্য করে।
 
@@ -28,7 +38,7 @@ export default function DashboardLayout({ children }) {
 ```
 
 
-### 3. Router Group
+### ==3. Router Group==
 A route group can be created by wrapping a folder's name in parenthesis: ==(folderName)==
 To organize routes without affecting the URL, create a group to keep related routes together. The folders in parenthesis will be omitted from the URL (e.g. `(marketing)` or `(shop)`.
  বন্ধনীর ফোল্ডারগুলি URL থেকে বাদ দেওয়া হবে (যেমন (বিপণন) বা (দোকান)।
@@ -36,11 +46,11 @@ To organize routes without affecting the URL, create a group to keep related rou
 ![[next008.png]]
 
 
-###  4.Not Found Page 404
+###  ==4.Not Found Page 404==
 
-🔹file name `not-found.js`
+Next.js-এর "Page Not Found" বা 404 পেজ তৈরি করা অনেক সহজ। ডিফল্টভাবে, যদি কোনো রুট না মেলে, Next.js তার নিজস্ব 404 পেজ দেখায়। তবে, কাস্টম 404 পেজ তৈরি করতে পারো `pages/404.js` ফাইল ব্যবহার করে।
 
-```
+```js
 import Link from 'next/link'
  
 export default function NotFound() {
@@ -54,10 +64,9 @@ export default function NotFound() {
 }
 ```
 
-### 5.Loading Page
+### ==5.Loading Page==
 
-
-✏️. loading.js![[next007.png]]
+## ✏️ Loading.js![[next007.png]]
 
 ```js
 import React from 'react';
@@ -71,9 +80,9 @@ const LoadingPage = () => {
 export default LoadingPage;
 ```
 
-✏️. Fallback
+## ✏️ Fallback
 
-```js
+```css
 import React, { Suspense, lazy } from 'react';
 
 const LazyComponent = lazy(() => import('./LazyComponent'));
@@ -92,7 +101,7 @@ const App = () => {
 export default App;
 ```
 
-### 6. Error Page
+### ==6. Global Error  Handling Page==
 
 ![[next004.png]]
 
@@ -103,7 +112,8 @@ const ErrorPage = ({error,reset}) => {
         <div>
             <h1>Something went wrong</h1>
             <h1>{error.message}</h1>
-            <button onClick={reset} >Try Again</button>
+            <button onClick={() => reset()
+            } >Try Again</button>
         </div>
     );
 };

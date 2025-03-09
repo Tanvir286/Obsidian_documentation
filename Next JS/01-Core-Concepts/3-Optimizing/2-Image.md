@@ -1,16 +1,13 @@
 The Next.js [`<Image>`](https://nextjs.org/docs/app/building-your-application/optimizing/images) component extends the HTML `<img>` element to provide:
 
-- **Size optimization:** Automatically serving correctly sized images for each device, using modern image formats like WebP and AVIF.
-- **Visual stability:** Preventing [layout shift](https://web.dev/articles/cls)
+Next.js-তে `next/image` কম্পোনেন্ট ব্যবহার করে ইমেজ লোডিং এবং অপ্টিমাইজেশন করা যায়। নিচে একটি উদাহরণ দেওয়া হলো যেখানে `next/image` ব্যবহার করে ইমেজ ডিসপ্লে করা হয়েছে এবং এর সাথে কিছু ডিটেইলস যোগ করা হয়েছে।
 
-- automatically when images are loading.
-- **Faster page loads:** Only loading images when they enter the viewport using native browser lazy loading, with optional blur-up placeholders.
-- **Asset flexibility:** Resizing images on-demand, even images stored on remote servers.
 
+
+✔️ এইটা সব সময় ব্যবহার করবে তাহলে যে কোন image problem করবে না ।
 
 0.0 next.config.js
 ```js
-/** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
         remotePatterns: [
@@ -24,7 +21,8 @@ const nextConfig = {
 module.exports = nextConfig;
 ```
 
-1.1 Image add local and url
+## ❒ Example: 01
+
 ```js
 import React from 'react';
 import Image from 'next/image';
@@ -53,3 +51,5 @@ const GalleryPage = () => {
 export default GalleryPage;
 ```
 
+
+✔️ `fill` প্রপার্টি ব্যবহার করা হয়েছে, যার ফলে ইমেজটি তার প্যারেন্ট কন্টেইনারের পুরো জায়গা জুড়ে বিস্তৃত হবে।`fill` ব্যবহার করলে `width` এবং `height` সেট করার প্রয়োজন নেই।
