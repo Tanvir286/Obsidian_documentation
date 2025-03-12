@@ -1,5 +1,8 @@
 
-## 🚥 server post
+## ==☪  server pos  ==
+
+![[Screenshot_10.png]]
+
 ```ts
 "use server"
 import { Blog } from "@/components/types";
@@ -18,7 +21,8 @@ export const createblog = async (data:Blog) =>{
 }
 ```
 
-## 🚥 form
+
+## ==☪  Form  ==
 
 ```ts
 "use client"

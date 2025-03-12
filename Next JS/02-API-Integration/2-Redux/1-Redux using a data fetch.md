@@ -1,6 +1,27 @@
 ![[next018.png]]
 
-📗 Store
+```js
+npm install @reduxjs/toolkit react-redux
+```
+
+
+##  ==📗 Store  
+
+old
+```js
+import { configureStore } from '@reduxjs/toolkit'
+
+export const store = configureStore({
+  reducer: {},
+})
+
+// Infer the `RootState` and `AppDispatch` types from the store itself
+export type RootState = ReturnType<typeof store.getState>
+// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
+export type AppDispatch = typeof store.dispatch
+```
+
+new
 ```ts
 import { configureStore } from '@reduxjs/toolkit'
 import { baseApi } from './api/baseApi'
@@ -17,7 +38,8 @@ export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
 ```
 
-📗 Provider
+## ==📗 Provider==
+
 ```ts
 "use client"
 import { store } from "@/redux/store";
@@ -34,7 +56,8 @@ const Providers = ({ children } : { children:React.ReactNode } ) => {
 export default Providers;
 ```
 
-📗 Layout
+## ==📗 Layout ==
+
 ```ts
 import Providers from './../lib/Provider';
 
@@ -64,7 +87,31 @@ export default function RootLayout({
 ```
 
 
-**📗 API** 
+## ==📗React RTK Query API ==
+
+
+Old
+
+```js
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import type { Pokemon } from './types'
+
+
+export const pokemonApi = createApi({
+  reducerPath: 'pokemonApi',
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://pokeapi.co/api/v2/' }),
+  endpoints: (build) => ({
+    getPokemonByName: build.query<Pokemon, string>({
+      query: (name) => `pokemon/${name}`,
+    }),
+  }),
+})
+
+export const { useGetPokemonByNameQuery } = pokemonApi
+```
+
+New
+
 ```ts
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
@@ -80,8 +127,25 @@ export const baseApi = createApi({
 export const { useGetBlogsQuery } = baseApi
 ```
 
+---
 
-**📗 Fetch API**
+
+<h1 style="
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 10px;
+">
+    Fetch API
+</h1>
+---
+
+
 ```ts
 "use client"
 import { useGetBlogsQuery } from '@/redux/api/baseApi';
