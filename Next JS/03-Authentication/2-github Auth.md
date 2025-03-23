@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 <h1 style="background: linear-gradient(45deg, #ff8c00, #ff0080); -webkit-background-clip: text; color: transparent; font-size: 30px; font-weight: bold; text-transform: uppercase; text-align: center; padding: 10px 20px; border-bottom: 3px solid #ff0080;">
         🚀 Provider Add
     </h1>
 [Github](https://next-auth.js.org/providers/github)
 
 ![[auth04.png]]
+=======
+### 1️⃣  Provider Add
+>>>>>>> 0aefa4ccfb4297cbddde6a1fa2d12b8b0cc7c5b1
 
 ```ts
 import { NextAuthOptions } from "next-auth"
@@ -20,19 +24,28 @@ export const authOptions:NextAuthOptions = {
 }
 ```
 
+<<<<<<< HEAD
 <h1 style="background: linear-gradient(45deg, #ff8c00, #ff0080); -webkit-background-clip: text; color: transparent; font-size: 30px; font-weight: bold;  text-align: center; padding: 10px 20px; border-bottom: 3px solid #ff0080;">
         🚀 .env file
     </h1>
 
+=======
+### 2️⃣  .env file
+>>>>>>> 0aefa4ccfb4297cbddde6a1fa2d12b8b0cc7c5b1
 ![[Next020.png]]
 ```ts
 GITHUB_ID= Ov23liGw50FDXrnTqqIh
 GITHUB_SECRET=5b86e80f8c6f1d9571d85ccbfddd1e883cb12e58
 ```
 
+<<<<<<< HEAD
 <h1 style="background: linear-gradient(45deg, #ff8c00, #ff0080); -webkit-background-clip: text; color: transparent; font-size: 30px; font-weight: bold;  text-align: center; padding: 10px 20px; border-bottom: 3px solid #ff0080;">
         🚀 onClick add
     </h1>
+=======
+
+### 3️⃣  Onclick Add
+>>>>>>> 0aefa4ccfb4297cbddde6a1fa2d12b8b0cc7c5b1
 
 ```js
 import { signIn } from "next-auth/react";
@@ -63,6 +76,7 @@ now Cookies add All information
 
 ![[Next021.png]]
 
+<<<<<<< HEAD
 ---
 
   <h1 style="
@@ -90,6 +104,12 @@ now Cookies add All information
 <h1 style="background: linear-gradient(45deg, #ff8c00, #ff0080); -webkit-background-clip: text; color: transparent; font-size: 30px; font-weight: bold;  text-align: center; padding: 10px 20px; border-bottom: 3px solid #ff0080;">
         🚀 secret add with env
     </h1>
+=======
+## ♕ Show User
+
+
+#### 4️⃣  secret add with env
+>>>>>>> 0aefa4ccfb4297cbddde6a1fa2d12b8b0cc7c5b1
 
 ```ts
 import { NextAuthOptions } from "next-auth"
@@ -103,13 +123,18 @@ export const authOptions:NextAuthOptions = {
         clientSecret: process.env.GITHUB_SECRET as string,
       })
   ],
+<<<<<<< HEAD
   secret: process.env.NEXTAUTH_SECRET,  //new
+=======
+  secret: process.env.NEXTAUTH_SECRET,
+>>>>>>> 0aefa4ccfb4297cbddde6a1fa2d12b8b0cc7c5b1
 }
 ```
 
 ```ts
 GITHUB_ID= Ov23liGw50FDXrnTqqIh
 GITHUB_SECRET=5b86e80f8c6f1d9571d85ccbfddd1e883cb12e58
+<<<<<<< HEAD
 
 NEXTAUTH_SECRET=abc // new 
 ```
@@ -117,6 +142,12 @@ NEXTAUTH_SECRET=abc // new
 <h1 style="background: linear-gradient(45deg, #ff8c00, #ff0080); -webkit-background-clip: text; color: transparent; font-size: 30px; font-weight: bold;  text-align: center; padding: 10px 20px; border-bottom: 3px solid #ff0080;">
         🚀 Page View
     </h1>
+=======
+NEXTAUTH_SECRET=abc
+```
+
+#### 5️⃣  Page View
+>>>>>>> 0aefa4ccfb4297cbddde6a1fa2d12b8b0cc7c5b1
 
 ```ts
 import { authOptions } from "@/utils/authOption";
@@ -147,6 +178,7 @@ export default DashboardPage;
 ```
 
 
+<<<<<<< HEAD
 ![[Next022.png]]
 
 ### `getServerSession` কীভাবে কাজ করে?
@@ -271,3 +303,6 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
 export default Navbar;
 ```
 
+=======
+![[Next022.png]]
+>>>>>>> 0aefa4ccfb4297cbddde6a1fa2d12b8b0cc7c5b1
