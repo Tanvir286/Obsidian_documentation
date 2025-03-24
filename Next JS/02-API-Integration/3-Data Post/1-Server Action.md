@@ -4,7 +4,7 @@
 <<<<<<< HEAD
 ![[Next023.png]]
 =======
-![[Screenshot_10.png]]
+![[next026.png]]
 >>>>>>> 0aefa4ccfb4297cbddde6a1fa2d12b8b0cc7c5b1
 
 ```ts

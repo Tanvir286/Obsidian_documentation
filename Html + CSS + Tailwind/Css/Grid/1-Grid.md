@@ -28,12 +28,11 @@ Grid ব্যবহার করতে গেলে দুটি জিনি�
 1. **Grid Container:** এটি পুরো গ্রিডের প্রধান কন্টেইনার।
 2. **Grid Items:** কন্টেইনারের ভেতরের প্রতিটি আইটেম।
 
-
 <h1 style="
     background: linear-gradient(90deg, #ff7e5f, #feb47b);
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 38px;
+    font-size: 20px;
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     letter-spacing: 1px;
@@ -41,12 +40,10 @@ Grid ব্যবহার করতে গেলে দুটি জিনি�
     padding: 15px;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 ">
-    Properties for the Parent
+    Properties of the parent
 </h1>
-
-<h1 style="font-family: 'Times New Roman', Times, serif; font-size: 50px; color: #1ABC9C; text-align: center; border-bottom: 2px solid #1ABC9C;">
-     grid-template-columns 
-</h1>
+# 🚩 grid-template-columns 
+---
 ### ✔️ example 01
 
 ```css
@@ -122,9 +119,8 @@ Grid ব্যবহার করতে গেলে দুটি জিনি�
 এখানে `repeat(4, 1fr)` ব্যবহার করে ৪টি সমান কলাম তৈরি হয়েছে।
 
 
-<h1 style="font-family: 'Times New Roman', Times, serif; font-size: 50px; color: #1ABC9C; text-align: center; border-bottom: 2px solid #1ABC9C;">
-     grid-template-rows 
-</h1>
+# 🚩 grid-template-rows
+---
 ### ✔️ example 01
 
 ```css
@@ -186,9 +182,9 @@ Grid ব্যবহার করতে গেলে দুটি জিনি�
 
 এখানে `repeat(4, 1fr)` ব্যবহার করে ৪টি সমান কলাম তৈরি হয়েছে।
 
-<h1 style="font-family: 'Arial', sans-serif; font-size: 45px; color: #57B4BA; text-align: center; text-decoration: underline; transition: color 0.3s;">
-grid-auto-rows
-</h1>
+
+# 🚩 grid-auto-rows
+---
 ### ✔️ example 01
 
 ```css
@@ -205,7 +201,7 @@ grid-auto-rows
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* ৩টি কলাম */
-  grid-auto-rows: 150px; /* প্রতিটি অটো সারির উচ্চতা ১৫০px */
+  grid-auto-rows: 1fr; /* প্রতিটি অটো সারির উচ্চতা ১৫০px */
 }
 ```
 
@@ -224,10 +220,8 @@ grid-auto-rows
 ```
 
 
- <h1 style="font-family: 'Arial', sans-serif; font-size: 45px; color: #57B4BA; text-align: center; text-decoration: underline; transition: color 0.3s;">
-    grid-template-rows-columns 
-</h1>
-
+# 🚩 grid-template-rows-columns
+---
 ### ✔️ example 01
 
 ```css
@@ -281,9 +275,8 @@ grid-auto-rows
 ![[grid05.png]]
 
 
-<h1 style="font-family: 'Arial', sans-serif; font-size: 35px; color: #57B4BA; text-align: center; text-decoration: underline; transition: color 0.3s;">
-    grid-template-rows-columns Combine
-</h1>
+# 🚩 grid-template-rows-columns Combine
+---
 
 ```jsx
 .container {
@@ -293,9 +286,8 @@ grid-auto-rows
 ```
 
 
-<h1 style="font-family: 'Times New Roman', Times, serif; font-size: 50px; color: #1ABC9C; text-align: center; border-bottom: 2px solid #1ABC9C;">
-     grid-gap 
-</h1>
+# 🚩 grid-gap
+---
 
 ### ✔️ example 01
 
@@ -310,7 +302,6 @@ grid-auto-rows
 }
 ```
 
-
 ### ✔️ example 02
 
 ```css
@@ -322,7 +313,6 @@ grid-auto-rows
   grid-gap: 10px 10px; /* প্রথম মান সারির গ্যাপ, দ্বিতীয় মান কলামের গ্যাপ */
 }
 ```
-
 
 ### ✔️ একক `gap` প্রপার্টি
 
@@ -339,11 +329,18 @@ grid-auto-rows
 
 
 
+---
+                                                                    
+---
+
+# Properties of the children
+
+
 <h1 style="
     background: linear-gradient(90deg, #ff7e5f, #feb47b);
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 38px;
+    font-size: 20px;
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     letter-spacing: 1px;
@@ -351,22 +348,23 @@ grid-auto-rows
     padding: 15px;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 ">
- Properties for the Children
+    Properties of the Children
 </h1>
 
-| Property              | Description                                                              |
-|-----------------------|--------------------------------------------------------------------------|
-| **`grid-column-start`** | এটি নির্ধারণ করে যে গ্রিড আইটেমটি কোন কলাম থেকে শুরু হবে।           |
-| **`grid-column-end`**   | এটি নির্ধারণ করে যে গ্রিড আইটেমটি কোন কলামে শেষ হবে।                   |
-| **`grid-row-start`**    | এটি নির্ধারণ করে যে গ্রিড আইটেমটি কোন সারি থেকে শুরু হবে।             |
-| **`grid-row-end`**      | এটি নির্ধারণ করে যে গ্রিড আইটেমটি কোন সারিতে শেষ হবে।                  |
+| Property                | Description                                               |
+| ----------------------- | --------------------------------------------------------- |
+| **`grid-column-start`** | এটি নির্ধারণ করে যে গ্রিড আইটেমটি কোন কলাম থেকে শুরু হবে। |
+| **`grid-column-end`**   | এটি নির্ধারণ করে যে গ্রিড আইটেমটি কোন কলামে শেষ হবে।      |
+| **`grid-row-start`**    | এটি নির্ধারণ করে যে গ্রিড আইটেমটি কোন সারি থেকে শুরু হবে। |
+| **`grid-row-end`**      | এটি নির্ধারণ করে যে গ্রিড আইটেমটি কোন সারিতে শেষ হবে।     |
+|                         |                                                           |
 
 ### **`-1` এর ব্যবহার:**
 
 - যখন আপনি **`-1`** ব্যবহার করেন, এটি গ্রিডের **শেষ** লাইনকে নির্দেশ করে।
-<h1 style="font-family: 'Times New Roman', Times, serif; font-size: 30px; color: #1ABC9C; text-align: center; border-bottom: 2px solid #1ABC9C;">
-     grid-column-start & grid-column-end
-</h1>
+
+# 🚩 grid-column-start & grid-column-end
+---
 
 ```css
 
@@ -391,9 +389,8 @@ grid-auto-rows
 ```
 
 
-<h1 style="font-family: 'Times New Roman', Times, serif; font-size: 30px; color: #1ABC9C; text-align: center; border-bottom: 2px solid #1ABC9C;">
-     grid-row-start এবং grid-row-end:
-</h1>
+# 🚩 grid-row-start & grid-row-end
+---
 
 ```css
 .grid-container {
@@ -439,100 +436,9 @@ grid-auto-rows
 
 ```
 
+
+
 ---
                                                                     
 ---
 
-
-<h1 style="font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: 700; color: #34495E; text-align: center; text-transform: uppercase; letter-spacing: 2px; background: linear-gradient(45deg, #FF6F61, #FF3D00); -webkit-background-clip: text; color: transparent; padding: 20px 0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 10px; border: 2px solid #FF3D00;">
-    Design One
-</h1>
-
-![[grid07.png]]
-
-```tsx
-.parent {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 90px 1fr 90px; 
-}
-
-.parent div:nth-child(1) {
-  grid-column: 1 / -1; /* সব 12টি কলাম নিয়ে জায়গা দিচ্ছে */
-}
-
-.parent div:nth-child(2) {
-  grid-column: 1 / 3; /* প্রথম দুটি কলাম নিয়ে জায়গা দিচ্ছে */
-}
-
-.parent div:nth-child(3) {
-  grid-column: 3 / -1; /* তৃতীয় কলাম থেকে শুরু করে সব কলাম নিয়ে জায়গা দিচ্ছে */
-}
-
-.parent div:nth-child(4) {
-  grid-column: 1 / -1; /* সব 12টি কলাম নিয়ে জায়গা দিচ্ছে */
-}
-
-```
-
-
-<h1 style="font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: 700; color: #34495E; text-align: center; text-transform: uppercase; letter-spacing: 2px; background: linear-gradient(45deg, #FF6F61, #FF3D00); -webkit-background-clip: text; color: transparent; padding: 20px 0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 10px; border: 2px solid #FF3D00;">
-    Design Two
-</h1>
-
-![[grid08.png]]
-
-```tsx
-<div class="parent">
-     <div>1</div>
-     <div>2</div>
-     <div>3</div>
-     <div>4</div>
-</div>
-
-
-.parent{
-  height:100vh;
-  display:grid;
-
-  grid-templete-colums:repeat(12,1fr);
-  grid-template-row:90 1fr 90px;
-}
-
-
-.parent div:nth-child(1) {
-    grid-column: 3 / -1;
-}
-
-.parent div:nth-child(2) {
-   grid-column: 1 / 3;
-   grid-row:1 / 3
-}
-
-.parent div:nth-child(3) {
-   grid-column: 3 / -1;
-}
-
-.parent div:nth-child(4) {
-    grid-column: 1 / -1;
-}
-
-```
-
-
-
-<h1 style="
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
-    -webkit-background-clip: text;
-    color: transparent;
-    font-size: 38px;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    letter-spacing: 1px;
-    text-align: center;
-    padding: 15px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-">
- Properties for the Children
-</h1>
